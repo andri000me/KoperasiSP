@@ -1,0 +1,91 @@
+body{
+	padding-top: 58px;
+	margin: 0;
+}
+
+/* ************************* Home Page */
+.header{
+	background: #17a2b8 ; 
+	padding: 30px 0 20px 0;
+}
+.header .description h2{
+	color: #fff;
+	line-height: 1.5;
+}
+.page-content{
+	background: url(../img/header.jpg);
+    padding: 60px;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+div.garis{
+	border-top: 2px solid #17a2b8;
+	margin: 10px 30% 30px 30%;
+}
+.page-team{
+	padding: 60px;
+}
+.page-team img.foto-team{
+	width: 120px;
+	border-radius: 50%;
+}
+.page-team h4.nama-team{
+	margin-top: 10px;
+}
+.page-team .desc{
+	border-right: 5px solid #17a2b8;
+	margin-bottom: 40px;
+}
+
+/* ************************* footer css */
+footer{
+	color: #fff;
+}
+footer .info-footer{
+	background: #656565;
+	padding: 15px 0 1px 0 ;	
+	height: auto;
+}
+footer .copy-footer{
+	background: #333333;
+	padding: 15px 0 1px 0 ;
+}
+#top-social-profiles{
+	padding:15px 0 0 0;
+	height:32px;
+	text-align:right
+}
+#top-social-profiles ul{
+	list-style: none
+}
+#top-social-profiles .widget-container{
+	background:none;
+	padding:0;
+	border:0
+}
+#top-social-profiles svg{
+	width:35px;
+	height:35px;
+	padding:3px;
+	transition:all .4s ease-out
+}
+#top-social-profiles a.facebook:hover svg,a.messenger:hover svg,a.twitter:hover svg,a.emaill:hover svg,a.instagram:hover svg{
+	background-color:#fff;
+	border-radius:50%;
+	transition:all .4s ease-out
+}
+#top-social-profiles svg path{fill:#fff}
+#top-social-profiles a.facebook:hover svg path{fill:#3b5998}
+#top-social-profiles a.messenger:hover svg path{fill:#0084FF}
+#top-social-profiles a.twitter:hover svg path{fill:#4099ff}
+#top-social-profiles a.emaill:hover svg path{fill:#fda039}
+#top-social-profiles a.instagram:hover svg path{fill:#d6249f}
+
+/*
+https://templated.co/retrospect
+http://tutorial-webdesign.com/labs/portfolio/1/index.html
+https://madebyfieldwork.com/
+http://www.pinjaman24.id/
+https://ksusb.co.id/portfolio/ksb-online/#
+*/

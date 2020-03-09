@@ -1,0 +1,24 @@
+#sidebar-wrapper{
+	width: 230px;
+	min-height: 100vh;
+	background: #7A471D;
+}
+.sidebar-heading{
+	padding: 20px 0 20px 0;
+}
+.list-group{
+	border-radius: none;
+}
+.list-group-item{
+	color: #fff;
+	width: 230px;
+	background: #7A471D;
+	border: none;
+}
+.garis-side-nav{
+	border-top: 2px solid #2A180A;
+	margin: 0 20px 0 20px;
+}
+.aw{ 
+	color:#fff;font-size:20px;margin-right:20px; 
+}

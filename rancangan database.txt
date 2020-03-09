@@ -1,0 +1,65 @@
+USERS
+	id, nama, nik, tgl_lahir, jenis kelamin, pekerjaan, no hp, alamat, email, username, password, role, logged_at, created_at, updated_at
+
+
+SIMPANAN
+	ambil dari data MEMBER id_user,
+	id, jml_simpan, jenis_simpan(s_pokok, s_wajib, s_sukarela, sisa_usaha, modal_pinjaman, donasi), tgl_simpan, ket
+		dana cadangan sisa usaha, modal pinjaman dari bank/lainya, donasi => menggunakan admin
+
+WITHDRAW(PENGAMBILAN SIMPANAN)
+	ambil dari data USERS id
+	id, jml_withdraw, tgl_withdraw, ket
+
+PINJAMAN
+	id, id_ap, id_user, jml_pinjam, angsuran, tgl_pinjam, tgl_lunas, ket
+
+ANGSURAN PINJAMAN
+	id, id_user, jml_pinjam, angsuran, angsuran_ke, jml_angsuran, sisa_angsuran, tgl_angsuran, status(disetujui, belum disetujui)
+
+id
+id_user
+jml_pinjam
+angsuran
+angsuran_ke
+jml_angsuran
+sisa_angsuran
+tgl_angsuran
+status_pinjam
+ket
+
+CREATE TABLE angsuran_pinjaman(
+    id INT(11) AUTO_INCREMENT NOT NULL,
+    id_user	INT(11) NOT NULL,
+    jml_pinjam INT(11) NOT NULL,
+    angsuran INT(11) NOT NULL,
+    angsuran_ke INT(11) NOT NULL,
+    jml_angsuran INT(11) NOT NULL,
+    sisa_angsuran INT(11) NOT NULL,
+    tgl_angsuran INT(11) NOT NULL,
+    status_pinjam INT(11) NOT NULL,
+	ket TEXT,
+    PRIMARY KEY(id),
+    FOREIGN KEY(id_user) REFERENCES users(id)
+)
+
+
+id
+id_ap
+angsuran
+tgl_pinjam
+tgl_lunas
+
+
+CREATE TABLE pinjaman(
+    id INT(11) AUTO_INCREMENT NOT NULL,
+    id_ap INT(11) NOT NULL,
+    id_user_ap INT(11) NOT NULL,
+    jml_pinjam INT(11) NOT NULL,
+    angsuran INT(11) NOT NULL,
+    tgl_pinjam INT(11) NOT NULL,
+    tgl_lunas INT(11) NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(id_ap) REFERENCES angsuran_pinjaman(id),
+    FOREIGN KEY(id_user_ap) REFERENCES angsuran_pinjaman(id_user)
+)
